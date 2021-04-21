@@ -49,19 +49,19 @@ moreInfoContainer.append( MenuLink( 'contact', 'contact' ) );
 const flags = document.createElement('DIV');
 flags.id = 'menu-flags';
 
-menuContent.append( flags );
+// menuContent.append( flags );
 
 const frFlag = document.createElement('IMG');
-frFlag.src = "https://cad-portfolio.s3.eu-west-3.amazonaws.com/images/flag-fr.png";
+frFlag.src = "assets/images/flag-fr.png";
 const setFrench = () => { setSelectedFlat( frFlag, 'french' ) };
 frFlag.onclick = setFrench;
 
 const engFlag = document.createElement('IMG');
-engFlag.src = "https://cad-portfolio.s3.eu-west-3.amazonaws.com/images/flag-eng.png";
+engFlag.src = "assets/images/flag-eng.png";
 const setEnglish = () => { setSelectedFlat( engFlag, 'english' ) };
 engFlag.onclick = setEnglish;
 
-flags.append( frFlag, engFlag );
+// flags.append( engFlag );
 
 function setSelectedFlat( flagToSelect, language ) {
 

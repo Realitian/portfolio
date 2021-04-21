@@ -26,17 +26,17 @@ container.append( samplesContainer );
 
 createSamplesBox(
 	'renders',
-	'https://cad-portfolio.s3.eu-west-3.amazonaws.com/images/render-teaser.jpg',
-	'https://cad-portfolio.s3.eu-west-3.amazonaws.com/samples/felix_mariotto_renders.zip'
+	'assets/images/render-teaser.jpg',
+	'assets/samples/renders.zip'
 );
 
 createSamplesBox(
 	'cad',
-	'https://cad-portfolio.s3.eu-west-3.amazonaws.com/images/cad-teaser.jpg',
-	'https://cad-portfolio.s3.eu-west-3.amazonaws.com/samples/felix_mariotto_cad.zip'
+	'assets/images/model-teaser.jpg',
+	'assets/samples/model.zip'
 );
 
-// createSamplesBox( 'Documentation', 'https://cad-portfolio.s3.eu-west-3.amazonaws.com/textures/viewer2.jpg' );
+// createSamplesBox( 'Documentation', 'assets/textures/viewer2.jpg' );
 
 //
 

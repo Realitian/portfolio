@@ -30,13 +30,13 @@ speech.append( texts.modules.contact.speech );
 const mailLink = document.createElement('A');
 mailLink.target = "_blank";
 mailLink.ondragstart = () => { return false }
-mailLink.href = 'mailto:felix.mariotto@gmail.com';
+mailLink.href = 'mailto:kevinnroan@gmail.com';
 
 const mailIcon = document.createElement('I');
 mailIcon.classList.add('fa', 'fa-envelope');
 
 const mailText = document.createElement('P');
-mailText.innerHTML = 'felix.mariotto@gmail.com';
+mailText.innerHTML = 'kevinnroan@gmail.com';
 
 mailLink.append( mailIcon, mailText );
 
@@ -46,7 +46,7 @@ const githubLink = document.createElement('A');
 githubLink.target = "_blank";
 githubLink.ondragstart = () => { return false }
 githubLink.draggable = "false";
-githubLink.href = 'https://github.com/felixmariotto';
+githubLink.href = 'https://github.com/realitian';
 
 const githubIcon = document.createElement('I');
 githubIcon.classList.add('fa', 'fa-github');
@@ -59,7 +59,7 @@ const linkedinLink = document.createElement('A');
 linkedinLink.target = "_blank";
 linkedinLink.ondragstart = () => { return false }
 linkedinLink.draggable = "false";
-linkedinLink.href = 'https://www.linkedin.com/in/felixmariotto';
+linkedinLink.href = 'https://www.linkedin.com/in/kevin-roan-09356b166/';
 
 const linkedinIcon = document.createElement('I');
 linkedinIcon.classList.add('fa', 'fa-linkedin-square');

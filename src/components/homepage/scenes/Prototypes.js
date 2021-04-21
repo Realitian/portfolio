@@ -65,7 +65,7 @@ export default function Prototypes( domElement ) {
 	const EXTENSION = 'jpg';
 
 	const envMap = new THREE.CubeTextureLoader()
-					.setPath( 'https://cad-portfolio.s3.eu-west-3.amazonaws.com/textures/expertise-cubemap/' )
+					.setPath( 'assets/textures/expertise-cubemap/' )
 					.load( [ `px.${ EXTENSION }`, `nx.${ EXTENSION }`, `py.${ EXTENSION }`, `ny.${ EXTENSION }`, `pz.${ EXTENSION }`, `nz.${ EXTENSION }` ] );
 
 	const glassGeometry = new THREE.PlaneBufferGeometry( 0.24, 0.17 );
@@ -98,7 +98,7 @@ export default function Prototypes( domElement ) {
 
 		images.push( plane );
 
-		textureLoader.load( `https://cad-portfolio.s3.eu-west-3.amazonaws.com/textures/viewer${ i }.jpg`, (texture) => {
+		textureLoader.load( `assets/textures/viewer${ i }.jpg`, (texture) => {
 
 			const material = new THREE.MeshLambertMaterial({
 				map: texture,

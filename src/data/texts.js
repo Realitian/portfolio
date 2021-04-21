@@ -3,15 +3,13 @@
 
 const setLanguages = [];
 
-function TextNode( engText, frText ) {
-
-	frText = frText ? frText : engText;
+function TextNode( engText ) {
 
 	const node = document.createTextNode( engText );
 
 	setLanguages.push( ( language ) => {
 
-		node.nodeValue = language === 'english' ? engText : frText;
+		node.nodeValue = engText;
 
 	})
 
@@ -33,13 +31,13 @@ export default {
 	// MENU
 
 	menu: {
-		consulting: TextNode( "Consulting", "Conseil" ),
-		prototypes: TextNode( "Prototypes & Viewers", "Prototypes & Rendus" ),
-		casting: TextNode( "Casting Parts", "Pièces de Fonte" ),
-		doc: TextNode( "Documentation" ),
-		webdev: TextNode( "Web Development", "Développement Web" ),
-		samples: TextNode( "Demos", "Démonstrations" ),
-		contact: TextNode( 'Contact' /* 'Contact & Rate', 'Contact & Tarifs' */ )
+		consulting: TextNode( "Item 1" ),
+		prototypes: TextNode( "Item 2" ),
+		casting: TextNode( "Item 3" ),
+		doc: TextNode( "Item 4" ),
+		webdev: TextNode( "Item 5" ),
+		samples: TextNode( "Item 6" ),
+		contact: TextNode( 'Item 7' )
 	},
 
 	// HOMEPAGE
@@ -50,99 +48,78 @@ export default {
 
 		intro: {
 			intro: TextNode(
-				'High Jewellery Design',
-				'Design de Haute Joaillerie'
+				'Home Block'
 			)
 		},
 
 		// EXPERTISE SCENE
 
 		expertise: {
-			title: TextNode( "Consulting", "Conseil" ),
+			title: TextNode( "Block 2" ),
 
 			text: TextNode(
-				`Backed by my experience working with the most demanding 
-				high jewelry companies, I am able to advise you 
-				in your projects.`,
-
-				`Fort d'une expérience de travail avec les maisons de 
-				joaillerie les plus exigeantes, je suis à même de vous 
-				conseiller dans vos projets.`
+				`Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				Nulla consectetur tellus nisi, quis mollis tellus congue id. 
+				Sed quis luctus lectus. Nam lorem sapien, maximus et orci quis, mattis sodales sapien. 
+				Praesent sit amet neque sem. Integer et fringilla tellus. Aenean finibus sapien nisi, 
+				id faucibus eros hendrerit et. Morbi a interdum ligula. Maecenas nec nibh massa`
 			),
 
-			more: TextNode( "learn more ", "voir plus " )
+			more: TextNode( "details" )
 		},
 
 		// PROTOTYPES SCENE
 
 		prototypes: {
 			title: TextNode(
-				"Prototypes & viewers",
-				"Prototypes & rendus"
+				"Block 3"
 			),
 
 			text: TextNode(
-				`Early in development you 
-				will review resin 
-				prototypes and photorealistic 
-				viewers in order to pinpoint 
-				issues fast and respect 
-				your schedule.`,
-
-				`Tôt pendant le développement,
-				vous examinerez des rendus et des 
-				prototypes en résine pour 
-				identifier les problèmes rapidement et
-				respecter vos échéances.`
+				`Vestibulum varius vitae nibh et consequat. 
+				Morbi lobortis leo ultrices purus lobortis pharetra. 
+				Aenean condimentum ac orci non mattis. .`
 			),
 
-			more: TextNode( "learn more ", "voir plus " )
+			more: TextNode( "details" )
 		},
 
 		// CASTING PARTS SCENE
 
 		casting: {
-			title: TextNode( "Casting parts", "Pièces de fonte" ),
+			title: TextNode( "Block 4" ),
 
 			text: TextNode(
-				`Once your jewel is designed, 
-				I can supply production-ready files
-				for 3D printing or CNC milling`,
-
-				`Une fois votre bijou conçu,
-				Je peux fournir des fichiers prêts pour
-				la production via impression 3D ou usinage.`
+				`Praesent consequat ante ac lorem ornare faucibus. 
+				Phasellus blandit, quam in sagittis ultrices, 
+				enim dui interdum purus, luctus consectetur velit lectus sed felis. `
 			),
 
-			more: TextNode( "learn more ", "voir plus " )
+			more: TextNode( "details" )
 		},
 
 		// DOCUMENTATION SCENE
 
 		doc: {
-			title: TextNode( "Documentation" ),
+			title: TextNode( "Block 5" ),
 
 			text: TextNode(
-				`I can provide the documentation that 
-				suit your need. Assembly instructions, 
-				stone setting blueprints, painting layouts...`,
-
-				`Je peux fournir la documentation
-				dont vous avez besoin. Plans de montage,
-				nomenclatures, plans quatre vues...`
+				`Sed vel neque non nibh condimentum posuere in sit amet massa. 
+				Praesent a lorem tempor, hendrerit nulla et, consectetur diam.
+				`
 			),
 
-			more: TextNode( "learn more ", "voir plus " )
+			more: TextNode( "details" )
 		},
 
 		// CONTACT SCENE
 
 		contact: {
-			title: TextNode( "More information :", "Plus d'information :" ),
+			title: TextNode( "More information :" ),
 
-			webdevLink: TextNode( 'Web development ', 'Développement Web ' ),
-			samplesLink: TextNode( 'Demos ', 'Démonstrations ' ),
-			contactLink: TextNode( 'Contact' /* 'Contact & Rate', 'Contact & Tarifs' */ )
+			webdevLink: TextNode( 'Section 1' ),
+			samplesLink: TextNode( 'Section 2' ),
+			contactLink: TextNode( 'Section 3' /* 'Contact & Rate', 'Contact & Tarifs' */ )
 		}
 
 	},
@@ -154,56 +131,25 @@ export default {
 		// EXPERTISE
 
 		expertise: {
-			title: TextNode( "Consulting", "Conseil" ),
+			title: TextNode( "Title" ),
 
 			presentation: {
-				title: TextNode( "Who am I ?", "Qui suis-je ?" ),
+				title: TextNode( "Sub title" ),
 
 				speech1: TextNode(
-					`I worked for more than two years as a 
-					technical designer for Lasbleiz Fournier Vitiello 
-					in Paris, which is a workshop famous in 
-					Place Vendôme high jewelry community for 
-					its quality work. Thereafter I lived in 
-					Hong Kong during three years, 
-					working for Michelle Ong who makes jewels 
-					for the most picky amateurs of this city-state.`,
-
-					`J'ai travaillé pendant plus de deux ans chez
-					Lasbleiz Fournier Vitiello en tant
-					que CAO ( Concepteur Assisté par Ordinateur ),
-					cet atelier est connu dans la communauté de
-					la place Vendôme pour son travail de grande qualité.
-					J'ai ensuite vécu trois ans à Hong Kong où
-					j'ai travaillé pour Michelle Ong,
-					qui fabrique des bijoux pour les plus fins 
-					connaisseurs de cette cité-état.`
+					`Donec ut faucibus ante, in porttitor ipsum. Nullam mattis dolor a massa ornare, eget ornare orci semper. Fusce rutrum, ligula ac efficitur bibendum, turpis lectus volutpat velit, sed semper dui dolor eget leo.`
 				),
 			
 				speech2: TextNode(
-						`On the basis of my design and project management 
-						skills acquired during these years, 
-						I can give you precious advices to help you making 
-						your projects happen.`,
-
-						`Sur la base de ces compétences en design et en gestion de projet,
-						je peux vous offrir un conseil précieux pour
-						vous aider à réaliser vos objectifs.`
+						`Nunc posuere ex tempus elementum tempor. Ut hendrerit nunc dignissim, luctus nisi eu, cursus mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed mi purus, semper eget vulputate vitae, suscipit ac nisl.`
 					)
 			},
 
 			service: {
-				title: TextNode( "My consulting services", "Mon service de conseil" ),
+				title: TextNode( "Sub title" ),
 
 				speech: TextNode(
-					`You can hire me to manage your design projects,
-					 or as an advisor who can help you making the right
-					 decision when you are in occasional need.`,
-
-					`Vous pouvez m'engager pour gérer vos projets 
-					de design, ou en tant que consultant pour 
-					vous aider à prendre la bonne décision 
-					quand vous avez une question ponctuelle.`
+					`Vivamus sit amet nunc ac ante mollis lobortis sed quis neque. Proin auctor porttitor consectetur. Ut ultricies sapien vitae erat rhoncus dapibus eleifend ut mi. Phasellus laoreet orci a nulla lacinia, et commodo erat aliquam. Aliquam placerat est quis nisi aliquam, eget rutrum urna blandit.`
 				)
 			}
 			
@@ -212,202 +158,84 @@ export default {
 		// PROTOTYPES
 
 		prototypes: {
-			title: TextNode( 'Prototypes & 3D viewers', "Prototypes & rendus" ),
+			title: TextNode( 'Title' ),
 
 			speech1: TextNode(
-				`Designing is a progressive process, 
-				scattered with unexpected issues. 
-				We are going to work jointly to 
-				reveal all the unforeseen details and 
-				oversights of the original project, 
-				in order to arrive at a product 
-				esthetically and technically flawless 
-				at the delivery date you will request.`,
-
-				`Le design est un processus évolutif,
-				parsemé d'imprévus. Nous allons 
-				travailler conjointement pour révéler les
-				problèmes conceptuels du design originel,
-				pour pouvoir arriver à un produit esthétiquement
-				et techniquement parfait à la date de
-				livraison que vous aurez défini.`
+				`Proin porttitor non ligula sed convallis. Nam eu ipsum in quam tempus bibendum ut eget ligula. Vivamus lobortis tortor eget diam facilisis congue. Etiam mollis vestibulum dui sed vulputate. Sed sodales vestibulum augue. Praesent luctus condimentum ligula, in porta ligula fringilla eget. Praesent quam sem, convallis sed quam a, aliquet maximus tellus. `
 			),
 
 			speech2: TextNode(
-				`To arrive at this perfect design and 
-				to save us from discovering flaws 
-				late in product development, 
-				we will regularly organize design reviews 
-				supported by resin prototypes and/or 3D viewers.`,
-
-				`Pour obtenir ce design parfait et nous 
-				épargner la découverte de défauts tard 
-				dans la conception du produit, nous 
-				organiserons régulièrement des révisions
-				du design, supportées par des prototypes
-				en résine et/ou des rendus 3D photoréalistes.`
+				`Quisque placerat dictum ex a congue. Vivamus sit amet erat ex. Quisque efficitur rutrum turpis quis dapibus. Maecenas semper fringilla dui, sed posuere erat hendrerit sed. Aliquam ut bibendum diam, vitae venenatis mi. In condimentum est id sem gravida placerat. Sed augue odio, vehicula a purus quis, tincidunt pharetra massa. Nullam nisi massa, ultricies sit amet risus consectetur, malesuada accumsan velit. Pellentesque ut varius libero.`
 			),
 
 			speech3: TextNode(
-				`If you don't happen to own a 3D printer to print
-				the prototypes, don't worry : I can handle it and ship them to you.`,
-
-				`Si vous ne possédez pas d'imprimante 3D pour
-				l'impression des prototypes, pas d'inquiétude : 
-				je m'en occupe pour vous, et vous les fait
-				livrer.`
+				`usce porta ultricies ex quis posuere. Mauris accumsan tempus ornare. Vivamus dictum ligula neque, sed ornare nibh semper vulputate. Pellentesque lobortis lacus ac nunc scelerisque, sed lacinia lectus cursus. `
 			)
 		},
 
 		// CASTING
 
 		casting: {
-			title: TextNode( 'Casting Parts', 'Pièces de fonte' ),
+			title: TextNode( 'Title' ),
 
 			speech1: TextNode(
-				`Your project is designed. Now you can 
-				opt for lost-wax casting via 3D printing to 
-				speed up your process, and ensure that the 
-				finished jewel you will get is as close as possible 
-				from what we designed together. 
-				On the basis of my jewelry handcrafting know-how, 
-				particularly in the stone setting field, 
-				I can adapt your design to the technical requirements 
-				of 3D printing, casting, and all the subsequent stages 
-				of jewelry handcrafting.`,
-
-				`Votre projet est conçu et dessiné. Vous pouvez
-				maintenant opter pour la fonte à cire perdue via
-				l'impression 3D pour accélerer la réalisation, 
-				et garantir que le bijou fini sera au plus 
-				proche de ce que nous avons conçu ensemble. 
-				Fort de mes connaissances pratiques en fabrication
-				de bijou, particulièrement dans le domaine
-				du sertissage, je peux adapter votre design
-				aux contraintes techniques de l'impression 3D,
-				de la fonte à cire perdue, et de toutes les
-				étapes ultérieures de fabrication.`
+				`Morbi volutpat congue nisl. Nulla at rhoncus tortor. Suspendisse tincidunt, nisl sit amet commodo volutpat, sem justo aliquet est, quis vestibulum justo turpis in mauris. Pellentesque convallis est et arcu dapibus, elementum fermentum ex commodo. Fusce sem quam, ultricies at dictum vitae, ullamcorper vel purus. Duis semper rutrum eleifend. Quisque vitae faucibus urna, vitae interdum lorem. Quisque aliquet tellus non mollis imperdiet. Integer nulla justo, convallis vel erat vel, sodales euismod turpis. Aliquam a purus hendrerit lacus faucibus tempus. Cras sagittis hendrerit purus nec condimentum. Nullam sollicitudin ornare aliquam.`
 			),
 
 			speech2: TextNode(
-				`If you are not lucky enough to own a 3D printer, 
-				I can lead you to suppliers who can handle your files
-				from 3D printing to casting.`,
-
-				`Si vous ne possédez pas votre propre imprimante 3D
-				adaptée à la fonte à cire perdue, je me propose de 
-				vous diriger vers des fournisseurs qui s'occuperont
-				de vos fichier de l'impression 3D à la fonte.`
+				`Donec ullamcorper malesuada enim, ut malesuada urna sollicitudin in. Cras efficitur venenatis enim. Mauris ac massa sed ante tempus pulvinar non id dui. Mauris viverra lectus nec nunc euismod, ac cursus ante scelerisque. Quisque mollis euismod tempus. Aliquam commodo dui quis ultrices pellentesque. Proin eget neque aliquet, vestibulum sapien at, finibus nisl. Quisque tempor egestas quam, vitae iaculis purus vestibulum non.`
 			)
 		},
 
 		// DOCUMENTATION
 
 		doc: {
-			title: TextNode( 'Documentation' ),
+			title: TextNode( 'Title' ),
 
 			speech1: TextNode(
-				`Once your project is designed, 
-				you are not left on your own. 
-				I send you all the documentation you need to 
-				assemble the parts, set the stones, 
-				and even communicate and advertise about your jewel.`,
-
-				`Une fois votre projet conçu, vous n'êtes pas
-				laissé à vous-même. Je vous envoie toute la 
-				documentation dont vous avez besoin pour 
-				assembler les éléments, sertir les pierres, 
-				et même communiquer sur votre bijou.`
+				`Nunc eleifend venenatis diam nec iaculis. Nam et hendrerit leo. Donec vulputate sit amet enim id eleifend. Integer eu erat eget urna tincidunt mattis. Cras mi leo, facilisis eget consectetur et, imperdiet interdum nibh. Aliquam rutrum eros et nisi vestibulum, quis pharetra urna molestie. Morbi tempor ex nunc, sed bibendum felis finibus commodo. `
 			),
 
 			speech2: TextNode(
-				`I adapt the documentation to every project, 
-				and listen to your special demands : 
-				parts spreadsheets for your inventory, 
-				documents for public presentations 
-				or customer use, 4-views layouts for painting... 
-				Name your own needs.`,
-
-				`J'adapte la documentation à chaque projet,
-				et répond à vos demandes spéciales :
-				tableaux pour vos inventaires, documents pour
-				vos présentations publiques ou privées, plans 
-				quatre vues à gouacher... Vous n'avez qu'à
-				demander.`
+				`Vivamus sollicitudin, odio eu congue ornare, massa mauris iaculis turpis, non tempus tortor risus id nisi. Sed non pretium orci, at consectetur diam. Duis finibus lacinia risus a gravida. Integer commodo sapien risus, ut mollis magna porttitor quis. Cras ex leo, convallis sed malesuada sit amet, vestibulum egestas nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.`
 			)
 		},
 
 		// WEB DEVELOPMENT
 
 		webdev: {
-			title: TextNode( 'Web Development', 'Développement web' ),
+			title: TextNode( 'Title' ),
 
 			speech1: TextNode(
-				`Web development has been my passion 
-				for some years, and I offer my 
-				services in this field. My skills in jewelry, 
-				3D modeling and web development are a rare 
-				and precious combination if you are a 
-				jewelry company with a project of high-end online service.`,
-
-				`Le développement web a été ma passion 
-				ces dernières années, et j'offre mes services
-				dans ce domaine. Mes compétences en joaillerie,
-				modélisation 3D et développement web sont une
-				combinaison rare et précieuse si vous êtes une
-				entreprise de joaillerie avec un projet de service
-				en ligne.`
+				`Morbi in convallis dolor. Nunc molestie orci purus, at tincidunt magna faucibus vitae. Cras tellus nulla, egestas eu sapien nec, egestas feugiat felis. Etiam est eros, ultricies non lectus sed, tempus vulputate ipsum. Nullam laoreet, turpis et eleifend sodales, tortor quam dignissim erat, sit amet tristique elit eros semper eros. Morbi euismod, erat porttitor blandit ultrices, metus metus maximus tellus, pharetra vulputate nisl tortor ac est. Nam consequat risus ex, ut vestibulum nisl aliquet non. Aliquam et ex nec est tristique mattis sed ac nisl. Donec faucibus venenatis erat, a tincidunt erat. In maximus erat justo, sit amet sollicitudin risus consequat vitae.`
 			),
 
 			speech2: TextNode(
-				`This website you are browsing was entirely designed and 
-				coded by myself with the latest web technologies
-				( Node.js, Three.js, Webpack, etc... ).
-				The 3D models displayed in the various scenes 
-				of the front page are mine, and required
-				a specific treatment for realtime rendering.`,
-
-				`Ce site que vous visitez a été entièrement designé et
-				programmé par moi-même avec les dernières
-				technologies web ( Node.js, Three.js, 
-				Webpack, etc... ). Les modèles 3D affichés
-				dans chaque scène de la page d'accueil sont les miens,
-				et on nécessité un traitement spécial pour le
-				rendu en temps réel.`
+				`Aenean accumsan purus eu massa dictum, ac facilisis nibh gravida. Praesent ac consectetur urna. Morbi dignissim, purus sit amet mattis convallis, eros leo aliquet diam, ut scelerisque metus mauris id mi. Mauris nec porta dolor. Maecenas blandit massa sed nulla finibus, elementum rutrum est ultrices. Etiam bibendum id purus in lacinia. Etiam varius in erat eget vestibulum. Nam at dictum nisi, congue feugiat velit. Nunc placerat ullamcorper erat, a lacinia ante vestibulum eu. Suspendisse facilisis nunc ligula, in rutrum lacus faucibus sed. Fusce iaculis eros ut vestibulum luctus.`
 			)
 		},
 
 		// SAMPLES
 
 		samples: {
-			title: TextNode( "Demos", "Démonstrations" ),
+			title: TextNode( "Title" ),
 
-			renders: TextNode( 'Photorealistic Rendering', 'Rendus Photoréalistes' ),
+			renders: TextNode( 'Maecenas facilisis leo vehicula, varius orci quis, laoreet massa.' ),
 
-			cad: TextNode( 'CAD 3D Models', 'Models 3D CAO' )
+			cad: TextNode( 'Pellentesque egestas elit sit amet ultrices vulputate.' )
 		},
 
 		// CONTACT
 
 		contact: {
-			title: TextNode( 'Contact' /* 'Contact & Rate', 'Contact & Tarifs' */ ),
+			title: TextNode( 'Title' /* 'Contact & Rate', 'Contact & Tarifs' */ ),
 
 			speech: TextNode(
-				`I am eager to answer any information
-				demand and make quotations tailored to
-				your special needs. I you want to discuss verbally, 
-				we can arrange a Skype or Zoom meeting on request.`,
-
-				`Je suis ravi de répondre à toute demande
-				d'information, et de faire un devis ajusté
-				à vos besoins. Si vous voulez discuter de
-				vive voix, nous pouvons organiser une entrevue
-				via Skype ou Zoom.`
+				`Suspendisse non sollicitudin nisi. Sed lobortis maximus ligula a consequat. Vivamus tincidunt massa facilisis enim molestie, ac euismod ante porttitor. Etiam a sodales turpis, in posuere urna. Donec tincidunt mi id lorem fermentum, nec volutpat lorem pharetra. Nullam quis malesuada nunc, a ultrices ex. Vivamus viverra, enim sit amet congue porta, dui magna vehicula quam, vitae vulputate nulla dui euismod risus.`
 			),
 
 			hourlyRate: TextNode(
-				'Hourly Rate : 95 USD',
-				'Tarif Horaire : 80 €'
+				'Etiam faucibus tortor eu quam maximus venenatis. Nullam id gravida metus, id hendrerit nibh. Quisque ac sapien eu lorem maximus lobortis at sed erat. In magna tortor, molestie in gravida sit amet, gravida sed lorem. Sed sed erat a diam sodales pulvinar. Aliquam commodo est sed massa dictum laoreet vel id erat. Integer id sem eget est dignissim tincidunt. Sed et euismod risus, in vestibulum dui. Ut fringilla accumsan vulputate. Vestibulum in suscipit elit. Donec nisi velit, pretium ut tellus bibendum, hendrerit rhoncus ligula. Nulla pulvinar ultricies urna, et tincidunt lorem molestie quis. Cras et arcu ex.'
 			)
 		}
 

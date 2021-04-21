@@ -46,10 +46,10 @@ export default function Casting( domElement ) {
 	const EXTENSION = 'jpg';
 
 	const envMap = new THREE.CubeTextureLoader()
-					.setPath( 'https://cad-portfolio.s3.eu-west-3.amazonaws.com/textures/expertise-cubemap/' )
+					.setPath( 'assets/textures/expertise-cubemap/' )
 					.load( [ `px.${ EXTENSION }`, `nx.${ EXTENSION }`, `py.${ EXTENSION }`, `ny.${ EXTENSION }`, `pz.${ EXTENSION }`, `nz.${ EXTENSION }` ] );
 
-	const roughnessMap = new THREE.TextureLoader().load( 'https://cad-portfolio.s3.eu-west-3.amazonaws.com/textures/metal_roughness.jpg' )
+	const roughnessMap = new THREE.TextureLoader().load( 'assets/textures/metal_roughness.jpg' )
 
 	const material = new THREE.MeshStandardMaterial({
 		envMap,

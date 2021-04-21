@@ -56,7 +56,7 @@ document.body.append( logoContainer );
 
 const logo = document.createElement('DIV');
 logo.id = 'logo';
-logo.innerHTML = 'Felix Mariotto';
+logo.innerHTML = 'Kevin Roan';
 
 logoContainer.append( logo );
 
